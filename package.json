@@ -1,0 +1,24 @@
+{
+  "name": "chatmem",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JI0PATA/membot.git"
+  },
+  "author": "Ivan Zhukov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JI0PATA/membot/issues"
+  },
+  "homepage": "https://github.com/JI0PATA/membot#readme",
+  "description": "",
+  "dependencies": {
+    "mongodb": "^3.6.9",
+    "mongoose": "^5.12.13",
+    "telegraf": "^4.3.0"
+  }
+}
