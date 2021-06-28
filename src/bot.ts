@@ -32,18 +32,16 @@ bot.start((ctx: any) => {
 
     ctx.scene.enter('baseScene')
 })
-bot.on('text', (ctx: any) => {
-    User.findOne({
+bot.on('text', async (ctx: any) => {
+    await User.findOne({
         id: ctx.update.message.from.id
     }, (err: any, findUser: any) => {
-        if (findUser.partner) {
+        if (findUser?.partner) {
             return repeatMatchMessage(ctx, findUser)
         } else {
             ctx.scene.enter('baseScene')
         }
     })
-
-
 })
 
 
