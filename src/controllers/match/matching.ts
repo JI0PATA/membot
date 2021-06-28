@@ -95,7 +95,7 @@ const matchingProcess = async (ctx: any) => {
             await User.findOne({
                 id: user.id
             }, (err: any, ownUser: any) => {
-                bot.telegram.sendMessage(findUser.chatId, texts.matchedPair.replace(/%1/, `@${ownUser.user.username}`))
+                return bot.telegram.sendMessage(findUser.chatId, texts.matchedPair.replace(/%1/, `@${ownUser.user.username}`))
             })
 
             return isFind = true
