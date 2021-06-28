@@ -45,7 +45,8 @@ const matchingProcess = async (ctx: any) => {
     await User.countDocuments({
         id: { $ne: user.id },
         gender: user.gender === 0 ? 1 : 0,
-        agreePD: { $ne: null }
+        agreePD: { $ne: null },
+        partner: null
     }, (err, count) => {
         usersCount = count
     })
@@ -61,7 +62,8 @@ const matchingProcess = async (ctx: any) => {
             rates: resultRates,
             id: { $ne: user.id },
             gender: user.gender === 0 ? 1 : 0,
-            agreePD: { $ne: null }
+            agreePD: { $ne: null },
+            partner: null
         }, async (err: any, fUser: any) => {
             findUser = fUser
         })
