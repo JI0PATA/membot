@@ -51,6 +51,10 @@ const matchingProcess = async (ctx: any) => {
         usersCount = count
     })
 
+    setTimeout(_ => {
+        isFind = true
+    }, 1000)
+
     while (!isFind) {
         if (iterate >= usersCount) {
             return isFind = true
@@ -67,8 +71,6 @@ const matchingProcess = async (ctx: any) => {
         }, async (err: any, fUser: any) => {
             findUser = fUser
         })
-
-        console.log(resultRates, findUser)
 
         if (findUser) {
 
